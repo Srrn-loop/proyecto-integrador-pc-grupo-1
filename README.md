@@ -188,13 +188,17 @@ proyecto-integrador-pc-grupo-1/
 ├── notebooks/
 │   └── analisis.ipynb
 ├── visualizaciones/
-│   ├── 01-distribucion-de-edades.png
-│   ├── 02-casos-por-sexo.png
-│   ├── 03-distribucion-precipitacion.png
-│   ├── 04-casos-semanales-y-precipitacion.png
-│   ├── 05-temperatura-y-casos-por-municipio.png
-│   ├── 06-plaquetas-segun-clasificacion.png
-│   └── 07-mapa-calor-correlaciones.png
+│   ├── Casos_dengue_municipio.png
+│   ├── Casos_dengue_semana.png
+│   ├── Casos_registrados_precipitacion_semana.png
+│   ├── Casos_registro_sexo.png
+│   ├── Consulta_gravedad_dengue.png
+│   ├── Distribucion_de_edades.png
+│   ├── LEEME.md
+│   ├── Mapa_calor.png
+│   ├── Niveles_plaquetas_dengue.png
+│   ├── Precipitacion_semanal.png
+│   └── Relacion_temperatura_casos.png
 └── README.md
 ```
 
