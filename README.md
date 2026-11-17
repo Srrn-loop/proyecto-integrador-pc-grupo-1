@@ -122,7 +122,7 @@ Los pacientes no asegurados presentaron la mayor demora promedio, con 5,42 días
 
 ### Demora en la consulta según gravedad
 
-![Demora en consulta](visualizaciones/)
+![Demora en consulta](visualizaciones/Consulta_gravedad_dengue.png)
 
 ## Conclusiones generales
 
