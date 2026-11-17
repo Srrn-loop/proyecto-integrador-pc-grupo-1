@@ -126,37 +126,38 @@ El histograma muestra cómo se distribuyen las edades de los registros. La media
 
 ### 2. Casos registrados por sexo
 
-![Casos por sexo](visualizaciones/02-casos-por-sexo.png)
+![Casos por sexo](visualizaciones/Casos_registro_sexo.png
+)
 
 La gráfica compara la cantidad de registros por sexo. La diferencia entre barras describe la composición del conjunto y no equivale a una comparación de riesgo poblacional.
 
 ### 3. Distribución de precipitación
 
-![Distribución de precipitación](visualizaciones/03-distribucion-precipitacion.png)
+![Distribución de precipitación](visualizaciones/Casos_registrados_precipitacion_semana.png)
 
 El diagrama de caja resume la dispersión y los valores extremos de la precipitación semanal disponible. La precipitación aparece asociada a registros de casos, por lo que esta vista es descriptiva y no representa observaciones independientes por paciente.
 
 ### 4. Casos semanales y precipitación
 
-![Casos semanales y precipitación](visualizaciones/04-casos-semanales-y-precipitacion.png)
+![Casos semanales y precipitación](visualizaciones/Precipitacion_semanal.png)
 
 La gráfica compara los casos por semana epidemiológica con la precipitación semanal agregada. La semana 21 registra el máximo de casos (119); la comparación temporal permite explorar coincidencias y desfases, sin establecer causalidad.
 
 ### 5. Temperatura y casos por municipio
 
-![Temperatura y casos por municipio](visualizaciones/05-temperatura-y-casos-por-municipio.png)
+![Temperatura y casos por municipio](visualizaciones/Relacion_temperatura_casos.png)
 
 El diagrama de dispersión relaciona temperatura media y cantidad de registros por municipio. La correlación exploratoria es 0,657 para diez municipios, por lo que debe interpretarse con cautela y no como una relación causal.
 
 ### 6. Plaquetas según clasificación
 
-![Plaquetas según clasificación](visualizaciones/06-plaquetas-segun-clasificacion.png)
+![Plaquetas según clasificación](visualizaciones/Niveles_plaquetas_dengue.png)
 
 El diagrama de cajas compara el recuento de plaquetas entre clasificaciones. Los promedios son 144,02, 80,26 y 33,10 miles/µL, respectivamente, desde dengue sin signos de alarma hasta dengue grave.
 
 ### 7. Mapa de calor de correlaciones
 
-![Mapa de calor de correlaciones](visualizaciones/07-mapa-calor-correlaciones.png)
+![Mapa de calor de correlaciones](visualizaciones/Mapa_calor.png)
 
 El mapa de calor permite comparar la dirección e intensidad de las correlaciones entre variables numéricas. Estas asociaciones son exploratorias y no permiten afirmar que una variable cause cambios en otra.
 
