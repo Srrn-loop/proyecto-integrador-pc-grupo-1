@@ -114,7 +114,7 @@ Los pacientes no asegurados presentaron la mayor demora promedio, con 5,42 días
 
 ### Relación entre temperatura y casos
 
-![Temperatura y casos](visualizaciones/)
+![Temperatura y casos](visualizaciones/Relacion_temperatura_casos.png)
 
 ### Plaquetas según clasificación
 
