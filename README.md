@@ -120,7 +120,7 @@ Las siguientes imágenes son generadas por el notebook y se guardan en `visualiz
 
 ### 1. Distribución de edades
 
-![Distribución de edades](visualizaciones/01-distribucion-de-edades.png)
+![Distribución de edades](visualizaciones/Distribucion_de_edades.png)
 
 El histograma muestra cómo se distribuyen las edades de los registros. La media es aproximadamente 34,3 años y la mediana 34 años; esto describe la muestra sintética, no la población de Antioquia.
 
