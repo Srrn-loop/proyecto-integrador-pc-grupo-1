@@ -184,9 +184,11 @@ El mapa de calor permite comparar la dirección e intensidad de las correlacione
 ```text
 proyecto-integrador-pc-grupo-1/
 ├── data/
+│   ├── LEEME.md
 │   └── salud_dengue_antioquia_2025.csv
 ├── notebooks/
-│   └── analisis.ipynb
+│   ├── analisis.ipynb
+│   └── LEEME.md
 ├── visualizaciones/
 │   ├── Casos_dengue_municipio.png
 │   ├── Casos_dengue_semana.png
