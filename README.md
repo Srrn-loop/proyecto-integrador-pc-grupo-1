@@ -106,19 +106,19 @@ Los pacientes no asegurados presentaron la mayor demora promedio, con 5,42 días
 
 ### Casos de dengue por municipio
 
-![Casos_por_Municipio](visualizaciones/Cantidad-de-casos-de-dengue-por-municipio.png)
+![Casos_por_Municipio](visualizaciones/)
 
 ### Relación entre temperatura y casos
 
-![Temperatura y casos](visualizaciones/Relacion_entre_temperatura_y_casos_de_dengue.png)
+![Temperatura y casos](visualizaciones/)
 
 ### Plaquetas según clasificación
 
-![Plaquetas por clasificación](visualizaciones/Niveles_de_plaquetas_segun_clasificacion_del_dengue.png)
+![Plaquetas por clasificación](visualizaciones/)
 
 ### Demora en la consulta según gravedad
 
-![Demora en consulta](visualizaciones/Demora_en_consulta_segun_gravedad_del_dengue.png)
+![Demora en consulta](visualizaciones/)
 
 ## Conclusiones generales
 
