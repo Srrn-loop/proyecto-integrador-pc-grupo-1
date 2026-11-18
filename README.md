@@ -55,16 +55,16 @@ El análisis busca aportar elementos descriptivos para identificar municipios y 
 
 El conjunto inicial tenía 2.859 filas y 18 columnas. Durante la revisión se identificaron valores faltantes y algunos valores atípicos que requerían tratamiento.
 
-| Variable o situación | Hallazgo | Decisión de limpieza |
-|---|---|---|
-| `dias_hospitalizacion` | 2.260 valores faltantes (79,05 %), asociados a personas no hospitalizadas | Se conservaron como faltantes estructurales; no se imputaron porque el dato no aplica a esos casos |
-| `ocupacion` | 1.946 valores faltantes (68,07 %) | Se eliminó la columna por su alta proporción de datos faltantes |
-| `plaquetas_miles` | 420 valores faltantes (14,69 %) | Se imputaron con la mediana según la clasificación clínica |
-| `regimen_salud` | 183 valores faltantes (6,40 %) | Se conservaron como faltantes |
-| `dias_sintomas_a_consulta` | 156 valores faltantes (5,46 %) | Se conservaron como faltantes |
-| `precipitacion_semana_mm` | 108 valores faltantes (3,78 %) | Se imputaron con la mediana por municipio |
-| `edad` | 98 valores faltantes iniciales (3,43 %) y tres edades superiores a 110 años | Las tres edades sospechosas (120, 135 y 135) se trataron como faltantes; luego se imputó la mediana por sexo |
-| Demoras de consulta | Tres valores superiores a 30 días (45, 60 y 45) | Se conservaron porque no había evidencia suficiente para declararlos imposibles |
+| Columna | Problema | % afectado | Decisión | Justificación |
+|---|---|---|---|---|
+| `dias_hospitalizacion` | 2.260 valores faltantes ("no aplica") | 79,05 % | Conservar como `NaN` (no imputar) | Son faltantes estructurales correspondientes a los 2.260 pacientes no hospitalizados; imputar con 0 distorsionaría las métricas de estancia. |
+| `ocupacion` | 1.946 valores faltantes | 68,07 % | Eliminar columna | Supera el 68 % de ausencia de datos; imputar introduciría un sesgo artificial severo y no es crítica para las preguntas. |
+| `plaquetas_miles` | 420 valores faltantes | 14,69 % | Imputar con la mediana por `clasificacion` | Es una variable numérica continua cuyo valor clínico depende directamente de la severidad del dengue; la mediana es robusta ante valores extremos. |
+| `regimen_salud` | 183 valores faltantes | 6,40 % | Conservar como faltantes | Variable categórica nominal; no se imputa con la moda para no asignar artificialmente un régimen de aseguramiento en análisis descriptivos. |
+| `dias_sintomas_a_consulta` | 156 faltantes y 3 atípicos (>30 días: 45, 60, 45) | 5,46 % (faltantes) y 0,10 % (atípicos) | Conservar faltantes y mantener atípicos | Los atípicos (45 y 60 días) pueden corresponder a consultas tardías reales; no se eliminan filas para no perder información clínica restante. |
+| `precipitacion_semana_mm` | 108 valores faltantes | 3,78 % | Imputar con la mediana por `municipio` | Variable ambiental continua con asimetría; agrupar por municipio respeta el comportamiento climático local de cada territorio. |
+| `edad` | 98 faltantes iniciales y 3 valores imposibles (>110 años: 120, 135, 135) | 3,53 % (101 registros en total) | Convertir edades >110 a `NaN` e imputar con la mediana por `sexo` | Edades de 120 y 135 años son errores de registro; se usa la mediana agrupada por sexo por ser una distribución numérica con dispersión. |
+| `fecha_notificacion` | Tipo de dato incorrecto (`object`) | 100 % | Convertir a `datetime64` | Necesario para habilitar operaciones cronológicas y validar la consistencia temporal de los registros. |
 
 No se eliminaron filas. La tabla final de trabajo quedó con **2.859 registros y 17 columnas**. La fecha de notificación se convirtió al tipo fecha para permitir el análisis temporal.
 
@@ -126,8 +126,7 @@ El histograma muestra cómo se distribuyen las edades de los registros. La media
 
 ### 2. Casos registrados por sexo
 
-![Casos por sexo](visualizaciones/Casos_registro_sexo.png
-)
+![Casos por sexo](visualizaciones/Casos_registro_sexo.png)
 
 La gráfica compara la cantidad de registros por sexo. La diferencia entre barras describe la composición del conjunto y no equivale a una comparación de riesgo poblacional.
 
@@ -206,7 +205,7 @@ proyecto-integrador-pc-grupo-1/
 
 ## Ejecución del análisis
 
-1. Abrir `notebooks/analisis.ipynb` en Google Colab o Jupyter Notebook.
+1. Abrir `notebooks/Analisis2.ipynb` en Google Colab o Jupyter Notebook.
 2. Ejecutar las celdas en orden. El notebook carga el CSV desde la URL pública del repositorio en GitHub, por lo que no es necesario descargarlo manualmente en el equipo.
 3. Al finalizar, las gráficas se exportan a la carpeta `visualizaciones/`.
 
