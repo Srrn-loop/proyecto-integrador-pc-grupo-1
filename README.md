@@ -187,7 +187,7 @@ proyecto-integrador-pc-grupo-1/
 │   ├── LEEME.md
 │   └── salud_dengue_antioquia_2025.csv
 ├── notebooks/
-│   ├── analisis.ipynb
+│   ├── Analisis2.ipynb
 │   └── LEEME.md
 ├── visualizaciones/
 │   ├── Casos_dengue_municipio.png
